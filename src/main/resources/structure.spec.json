@@ -1,0 +1,42 @@
+{
+  "Id": "CA000001",
+  "IdParent": "",
+  "Author": "pp",
+  "Date": "Today",
+  "Version": "V0.1",
+  "Title": "Gameplan",
+  "Subtitle": "« David Sibbet »",
+  "Template": "T11",
+  "Type": "Agile",
+  "MediaPlaceholder": [
+    {
+      "Media": "Gameplan b64 || markdown",
+      "URL": "xxxxxx.com",
+      "Legend": "XXX",
+      "EmbeddedMedia": [
+        {
+          "id": "xxx",
+          "Content": "B64"
+        }
+      ]
+    }
+  ],
+  "Links": [
+    {
+      "Next": "idCard",
+      "Prev": "idCard"
+    },
+    {
+      "URL": "",
+      "id": ""
+    }
+  ],
+  "Tags": [],
+  "Licence": "CCXxx",
+  "Code": [
+    {
+      "type": "QR",
+      "Options": "vide"
+    }
+  ]
+}
