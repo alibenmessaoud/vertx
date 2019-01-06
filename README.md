@@ -19,9 +19,8 @@ This guide walks you through the process of building a [Docker](https://docker.c
 ## Mongo-init
 
 ```xml
-<groupId>org.mongodb</groupId>
-<artifactId>mongodb-driver</artifactId>
-<version>3.8.2</version>
+org.mongodb
+3.8.2
 ```
 
 ## Build and run
