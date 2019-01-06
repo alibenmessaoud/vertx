@@ -1,14 +1,10 @@
 #!/bin/bash
 
-echo "Docker is starting fresh"
-
 if test ! -z "$(docker ps -aq)"; then
   docker stop $(docker ps -aq)
   docker rm $(docker ps -aq)
 fi
 
-if test ! -z "$(docker images -q go-agile-web/app.goagile.web)"; then
-  docker rmi go-agile-web/app.goagile.web
-fi
+docker rmi -f $(docker images -a | grep "<none>" | awk "{print \$3}")
 
 echo "==DOCKER:OK"
