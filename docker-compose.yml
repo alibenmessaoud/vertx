@@ -24,7 +24,7 @@ services:
     links:
       - mongo
 
-  go-agile-web:
+  api:
     image: io.kaplab.cards.api.image
     container_name: io.kaplab.cards.api
     build: ./api
