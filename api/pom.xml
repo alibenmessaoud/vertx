@@ -15,7 +15,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <docker.image.prefix>go-agile-web-image</docker.image.prefix>
+        <docker.image.prefix>io.kaplab.cards.api.image</docker.image.prefix>
     </properties>
 
     <dependencies>
