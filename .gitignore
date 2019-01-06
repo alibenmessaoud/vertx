@@ -32,6 +32,8 @@ logs
 ## Node
 node
 node_modules
+dist
+
 
 syncit
 

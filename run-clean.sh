@@ -1,8 +1,6 @@
 #!/bin/bash
 
-trap "exit" INT TERM ERR
-
-trap "kill 0" EXIT
+echo "Docker is starting fresh"
 
 if test ! -z "$(docker ps -aq)"; then
   docker stop $(docker ps -aq)
@@ -13,6 +11,4 @@ if test ! -z "$(docker images -q go-agile-web/app.goagile.web)"; then
   docker rmi go-agile-web/app.goagile.web
 fi
 
-mvn clean install
-
-docker-compose up -d & wait
+echo "==DOCKER:OK"
