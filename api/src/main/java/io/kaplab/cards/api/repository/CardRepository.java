@@ -1,6 +1,6 @@
-package app.goagile.web.repository;
+package io.kaplab.cards.api.repository;
 
-import app.goagile.web.model.Card;
+import io.kaplab.cards.api.model.Card;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.List;

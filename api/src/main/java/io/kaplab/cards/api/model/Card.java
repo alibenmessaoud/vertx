@@ -1,4 +1,4 @@
-package app.goagile.web.model;
+package io.kaplab.cards.api.model;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;

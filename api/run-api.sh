@@ -1,5 +1,5 @@
 #!/bin/bash
 
-mvn clean install -f ./api/pom.xml
+mvn clean install -f api/pom.xml
 
 echo "==API:OK"

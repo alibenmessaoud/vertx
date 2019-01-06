@@ -1,7 +1,7 @@
-package app.goagile.web.controller;
+package io.kaplab.cards.api.controller;
 
-import app.goagile.web.model.Card;
-import app.goagile.web.repository.CardRepository;
+import io.kaplab.cards.api.model.Card;
+import io.kaplab.cards.api.repository.CardRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
