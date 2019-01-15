@@ -11,4 +11,4 @@ trap "kill 0" EXIT
 ./api/run-api.sh
 ./app/run-app.sh
 
-docker-compose up -d & wait
+docker-compose up --build -d & wait
