@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {DataService} from '../data/data.service';
-import {Post} from '../Post';
+import {Card} from '../Card';
 import {DataSource} from '@angular/cdk/table';
 import {Observable} from 'rxjs/Observable';
 import {AuthService} from '../auth.service';
@@ -17,12 +17,12 @@ export class DashboardComponent {
   }
 
   displayedColumns = ['date_posted', 'title', 'category', 'delete'];
-  dataSource = new PostDataSource(this.dataService);
+  dataSource = new CardDataSource(this.dataService);
 
-  deletePost(id) {
+  delete(id) {
     if (this.auth.isAuthenticated()) {
-      this.dataService.deletePost(id);
-      this.dataSource = new PostDataSource(this.dataService);
+      this.dataService.delete(id);
+      this.dataSource = new CardDataSource(this.dataService);
     } else {
       alert('Login in Before');
     }
@@ -34,18 +34,18 @@ export class DashboardComponent {
       data: 'Add Card'
     });
     dialogRef.componentInstance.event.subscribe((result) => {
-      this.dataService.addPost(result.data);
-      this.dataSource = new PostDataSource(this.dataService);
+      this.dataService.add(result.data);
+      this.dataSource = new CardDataSource(this.dataService);
     });
   }
 }
 
-export class PostDataSource extends DataSource<any> {
+export class CardDataSource extends DataSource<any> {
   constructor(private dataService: DataService) {
     super();
   }
 
-  connect(): Observable<Post[]> {
+  connect(): Observable<Card[]> {
     return this.dataService.getData();
   }
 
