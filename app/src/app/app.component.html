@@ -8,9 +8,9 @@
                 <mat-icon class="icon">home</mat-icon>
                 <span class="label">Home</span>
             </a>
-            <a mat-list-item routerLink="/dashboard">
-                <mat-icon class="icon">dashboard</mat-icon>
-                <span class="label">Dashboard</span>
+            <a mat-list-item routerLink="/feed">
+                <mat-icon class="icon">feed</mat-icon>
+                <span class="label">Feed</span>
             </a>
             <a mat-list-item *ngIf="auth.isAuthenticated()" (click)="auth.logout()" type="button">
                 <span class="label">Logout</span>
@@ -42,8 +42,8 @@
                         </a>
                     </li>
                     <li>
-                        <a routerLink="/dashboard">
-                            <span class="label">Dashboard</span>
+                        <a routerLink="/feed">
+                            <span class="label">Feed</span>
                         </a>
                     </li>
                     <li>

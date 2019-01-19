@@ -6,7 +6,7 @@ import { MaterialModule } from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { FeedComponent } from './feed/feed.component';
 import { AppRouters } from './app.routes';
 import { DataService } from './data/data.service';
 import { AuthService } from './auth.service';
@@ -17,7 +17,7 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     WelcomeComponent,
-    DashboardComponent,
+    FeedComponent,
     PostDialogComponent
   ],
   imports: [

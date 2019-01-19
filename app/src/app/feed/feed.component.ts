@@ -8,11 +8,11 @@ import {PostDialogComponent} from '../post-dialog/post-dialog.component';
 import {MatDialog} from '@angular/material';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  selector: 'app-feed',
+  templateUrl: './feed.component.html',
+  styleUrls: ['./feed.component.css']
 })
-export class DashboardComponent {
+export class FeedComponent {
   constructor(public auth: AuthService, public dialog: MatDialog, private dataService: DataService) {
   }
 

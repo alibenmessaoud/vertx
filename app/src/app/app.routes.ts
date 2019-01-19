@@ -1,11 +1,11 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {WelcomeComponent} from './welcome/welcome.component';
-import {DashboardComponent} from './dashboard/dashboard.component';
+import {FeedComponent} from './feed/feed.component';
 
 const routes: Routes = [
   {path: '', component: WelcomeComponent},
-  {path: 'dashboard', component: DashboardComponent}
+  {path: 'feed', component: FeedComponent}
 ];
 
 @NgModule({
