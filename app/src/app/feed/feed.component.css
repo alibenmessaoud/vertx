@@ -1,19 +1,5 @@
-.card {
-  min-width: 95%;
-}
-
-.example-container {
+.container {
   display: flex;
-  flex-direction: column;
-  /* max-height: 500px;
-  min-width: 100%; */
-}
-
-.mat-table {
-  overflow: auto;
-  /* max-height: 500px; */
-}
-
-a {
-  cursor: pointer;
+  flex-wrap: wrap;
+  justify-content: center;
 }

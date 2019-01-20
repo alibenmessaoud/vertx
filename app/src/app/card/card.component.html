@@ -1,0 +1,20 @@
+<mat-card class="card">
+  <mat-card-header>
+    <div mat-card-avatar class="card-avatar-image">
+      <img class="card-avatar-image" src="https://ui-avatars.com/api/?rounded=true&name=shIBA+BAZ&size=42">
+    </div>
+    <mat-card-title>Shiba Inu</mat-card-title>
+    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="https://picsum.photos/432/300?image=0" alt="Photo of a Shiba Inu" style="width: 432px; height: 300px;">
+  <mat-card-content>
+    <p>
+        {{ card.text | truncate:[1000, '...'] }}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+</mat-card>
+ 

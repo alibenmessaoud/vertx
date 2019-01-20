@@ -1,0 +1,8 @@
+.card {
+    height: 500px; width: 400px; float: left; margin: 5px; border: 1px solid black
+}
+
+.card-avatar-image-img {
+    height: 42px;
+    width: 42px
+}

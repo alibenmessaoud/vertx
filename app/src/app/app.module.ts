@@ -12,13 +12,17 @@ import { DataService } from './data/data.service';
 import { AuthService } from './auth.service';
 import { PostDialogComponent } from './post-dialog/post-dialog.component';
 import { FormsModule } from '@angular/forms';
+import { CardComponent } from './card/card.component';
+import { TruncatePipe } from './commons';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
     FeedComponent,
-    PostDialogComponent
+    PostDialogComponent,
+    CardComponent,
+    TruncatePipe
   ],
   imports: [
     BrowserModule,
