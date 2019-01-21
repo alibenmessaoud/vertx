@@ -1,20 +1,30 @@
 <mat-card class="card-thumbnail">
   <mat-card-header>
     <div mat-card-avatar class="card-thumbnail-avatar-image">
-      <img class="card-thumbnail-avatar-image" src="https://ui-avatars.com/api/?rounded=true&name=shIBA+BAZ&size=42">
+      <img class="card-thumbnail-avatar-image" src="https://ui-avatars.com/api/?rounded=true&name={{ card.author }}&size=42">
     </div>
-    <mat-card-title>Shiba Inu</mat-card-title>
-    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    <mat-card-title>{{ card.title }}</mat-card-title>
+    <mat-card-subtitle>
+      {{ card.author }}
+      <span class="badge badge-pill badge-secondary">{{ card.type }}</span>
+    </mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image src="https://picsum.photos/432/300?image=0" alt="Photo of a Shiba Inu" style="width: 432px; height: 300px;">
+  <div class="card-thumbnail-image-container">
+      <img mat-card-image src="{{ card.image }}" alt="{{card.title}}">
+  </div>
   <mat-card-content>
-    <p>
-        {{ card.text | truncate:[1000, '...'] }}
+    <p class="card-thumbnail-description">
+        {{ card.description | truncate: [149, '...'] }}
     </p>
   </mat-card-content>
-  <mat-card-actions>
-    <button mat-button>LIKE</button>
-    <button mat-button>SHARE</button>
+  <mat-card-actions style="text-align: right">
+    <button mat-raised-button class="card-thumbnail-action">
+      <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon> Like
+    </button>
+    <a mat-raised-button 
+            class="card-thumbnail-action" 
+            [routerLink]="['/', 'card', card.code]"
+            routerLinkActive="router-link-active">View</a>
   </mat-card-actions>
 </mat-card>
  

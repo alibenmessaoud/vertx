@@ -14,6 +14,7 @@ import { PostDialogComponent } from './post-dialog/post-dialog.component';
 import { FormsModule } from '@angular/forms';
 import { CardThumbnailComponent } from './card-thumbnail/card-thumbnail.component';
 import { TruncatePipe } from './commons';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { TruncatePipe } from './commons';
     FeedComponent,
     PostDialogComponent,
     CardThumbnailComponent,
-    TruncatePipe
+    TruncatePipe,
+    CardComponent
   ],
   imports: [
     BrowserModule,

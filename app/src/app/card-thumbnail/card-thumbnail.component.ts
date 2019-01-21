@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Card } from '../Card';
 
 @Component({
   selector: 'app-card-thumbnail',
@@ -7,9 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardThumbnailComponent implements OnInit {
 
-  card = {
-    text: "The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting."
-  };
+  @Input() card: Card;
 
   constructor() { }
 
