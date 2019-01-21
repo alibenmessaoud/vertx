@@ -1,8 +1,12 @@
-.card {
+.card-thumbnail {
     height: 500px; width: 400px; float: left; margin: 5px; border: 1px solid black
 }
 
-.card-avatar-image-img {
+.card-thumbnail-avatar-image-img {
     height: 42px;
     width: 42px
+}
+
+.mat-card {
+    border-radius: 0px;
 }

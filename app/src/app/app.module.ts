@@ -12,7 +12,7 @@ import { DataService } from './data/data.service';
 import { AuthService } from './auth.service';
 import { PostDialogComponent } from './post-dialog/post-dialog.component';
 import { FormsModule } from '@angular/forms';
-import { CardComponent } from './card/card.component';
+import { CardThumbnailComponent } from './card-thumbnail/card-thumbnail.component';
 import { TruncatePipe } from './commons';
 
 @NgModule({
@@ -21,7 +21,7 @@ import { TruncatePipe } from './commons';
     WelcomeComponent,
     FeedComponent,
     PostDialogComponent,
-    CardComponent,
+    CardThumbnailComponent,
     TruncatePipe
   ],
   imports: [
