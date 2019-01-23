@@ -18,31 +18,32 @@ import {CardComponent} from './card/card.component';
 import {QRCodeModule} from "angularx-qrcode";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    WelcomeComponent,
-    FeedComponent,
-    PostDialogComponent,
-    CardThumbnailComponent,
-    TruncatePipe,
-    CardComponent
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    MaterialModule,
-    FlexLayoutModule,
-    AppRouters,
-    FormsModule,
-    QRCodeModule
-  ],
-  providers: [
-    DataService,
-    AuthService
-  ],
-  bootstrap: [AppComponent],
-  entryComponents: [
-    PostDialogComponent
-  ]
+    declarations: [
+        AppComponent,
+        WelcomeComponent,
+        FeedComponent,
+        PostDialogComponent,
+        CardThumbnailComponent,
+        TruncatePipe,
+        CardComponent
+    ],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        MaterialModule,
+        FlexLayoutModule,
+        AppRouters,
+        FormsModule,
+        QRCodeModule
+    ],
+    providers: [
+        DataService,
+        AuthService
+    ],
+    bootstrap: [AppComponent],
+    entryComponents: [
+        PostDialogComponent
+    ]
 })
-export class AppModule { }
+export class AppModule {
+}

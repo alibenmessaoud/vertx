@@ -1,36 +1,73 @@
 <div class="card">
-  <div style="font-size: 30px; width: 100%; text-align: center; padding: 5px 0 5px 0">
-    {{card.title}}
-  </div>
+    <mat-toolbar>
+        <span style="font-size: 30px">
+            {{card.title}}
+        </span>
+        <span style="margin: 6px 10px 0 10px; font-style: italic ">
+            authored by {{card.subtitle}}
+        </span>
+        <a *ngFor="let tag of card.tags"
+              class="badge badge-pill badge-secondary"
+              style="margin: 0 4px 0 4px">
+            {{ tag }}
+        </a>
 
-  <div style="text-align: center; background-color: gainsboro">
-    <img src="{{card.image}}" class="card-img-top" style="height: 50%; width: 50%;" alt="...">
-  </div>
+        <span class="fill-space"></span>
 
-  <div class="card-body" style="margin: 10px">
-    <div style="display: inline-block; height: 50px;">
-      <div style="float: left;">
-        <img src="https://ui-avatars.com/api/?rounded=true&name={{ card.author }}&size=42">
-      </div>
-      <div style="float: left; vertical-align:middle; padding: 10px">by {{card.author}}</div>
+        <a mat-raised-button *ngIf="hasPrev()">
+            <mat-icon aria-label="Got to prev">arrow_backward</mat-icon>
+        </a>
+
+        <a mat-raised-button *ngIf="hasNotParent()">
+            <mat-icon aria-label="Got to parent">arrow_upward</mat-icon>
+        </a>
+
+        <a mat-raised-button *ngIf="hasNext()">
+            <mat-icon aria-label="Got to next">arrow_forward</mat-icon>
+        </a>
+    </mat-toolbar>
+
+    <div style="text-align: center; background-color: gainsboro">
+        <img src="{{card.image}}" class="card-img-top" style="height: 50%; width: 50%;" alt="...">
     </div>
+
+
+    <div style="display: inline-block; height: 50px; margin: 5px">
+        <div style="float: left;">
+            <img src="https://ui-avatars.com/api/?rounded=true&name={{ card.author }}&size=42">
+        </div>
+        <div style="float: left; vertical-align:middle; padding: 10px">by {{card.author}}</div>
+    </div>
+
     <br>
+
     <div style="width: 100%; word-break: break-all;">
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+        electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+        Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+        Aldus PageMaker including versions of Lorem Ipsum.
     </div>
-  </div>
 
-  <br>
+    <br>
 
-  <div style="margin: 0 auto; width: 150px;">
-    <qrcode [qrdata]="url" [size]="150" [level]="'M'"></qrcode>
-  </div>
+    <div style="text-align: center">
 
-  <div class="card-footer text-muted" style="font-style: italic; padding: 10px; text-align: right">
-    Code XXX - Licence Creative Commons
-  </div>
+    </div>
 
-  <div>
-    End
-  </div>
+    <br>
+    <br>
+
+    <div style="margin: 0 auto; width: 150px;">
+        <qrcode [qrdata]="url" [size]="150" [level]="'M'"></qrcode>
+    </div>
+
+    <div class="card-footer text-muted" style="font-style: italic; padding: 10px; text-align: right">
+        {{ card.licence }}
+    </div>
+
+    <div>
+        End
+    </div>
 </div>

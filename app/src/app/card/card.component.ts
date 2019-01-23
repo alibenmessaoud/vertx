@@ -1,34 +1,55 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Card } from '../Card';
-import { ActivatedRoute } from '@angular/router';
-import { DataService } from '../data/data.service';
+import {Component, OnInit, OnDestroy} from '@angular/core';
+import {Card} from '../Card';
+import {ActivatedRoute} from '@angular/router';
+import {DataService} from '../data/data.service';
 
 @Component({
-  selector: 'app-card',
-  templateUrl: './card.component.html',
-  styleUrls: ['./card.component.css']
+    selector: 'app-card',
+    templateUrl: './card.component.html',
+    styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit, OnDestroy {
 
-  card: Card;
-  url: string;
+    card: Card;
+    url: string;
 
-  routeSubscription: any;
-  dataServiceSubscription: any;
+    routeSubscription: any;
+    dataServiceSubscription: any;
 
-  constructor(private route: ActivatedRoute, private dataService: DataService) {
-    this.url = window.location.href
-  }
+    constructor(private route: ActivatedRoute, private dataService: DataService) {
+        this.url = window.location.href
+    }
 
-  ngOnInit() {
-    this.routeSubscription = this.route.params.subscribe(params => {
-      const code = params['code']; // (+) converts string 'id' to a number
-      this.dataServiceSubscription = this.dataService.get(code).subscribe(response => {this.card = response; console.log(response)});
-    });
-  }
+    ngOnInit() {
+        this.routeSubscription = this.route.params.subscribe(params => {
+            const code = params['code']; // (+) converts string 'id' to a number
+            this.dataServiceSubscription = this.dataService.get(code).subscribe(response => {
+                this.card = response;
+                console.log(response)
+            });
+        });
+    }
 
-  ngOnDestroy() {
-    this.routeSubscription.unsubscribe();
-    this.dataServiceSubscription.unsubscribe()
-  }
+    ngOnDestroy() {
+        this.routeSubscription.unsubscribe();
+        this.dataServiceSubscription.unsubscribe()
+    }
+
+    hasParent() {
+        return this.card.idParent && this.card.idParent.length === 4 && this.card.idParent === "self";
+    }
+
+    hasNotParent() {
+        return !this.hasParent();
+    }
+
+    hasNext() {
+        return this.card.links && (this.card.links.length === 1 || this.card.links.length === 2) &&
+            ((this.card.links[0].next && this.card.links[0].next.length > 0) || (this.card.links[1].next && this.card.links[1].next.length > 0));
+    }
+
+    hasPrev() {
+        return this.card.links && (this.card.links.length === 1 || this.card.links.length === 2) &&
+            ((this.card.links[0].prev && this.card.links[0].prev.length > 0) || (this.card.links[1].prev && this.card.links[1].prev.length > 0));
+    }
 }
