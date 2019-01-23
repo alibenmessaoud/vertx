@@ -6,11 +6,6 @@
         <span style="margin: 6px 10px 0 10px; font-style: italic ">
             authored by {{card.subtitle}}
         </span>
-        <a *ngFor="let tag of card.tags"
-              class="badge badge-pill badge-secondary"
-              style="margin: 0 4px 0 4px">
-            {{ tag }}
-        </a>
 
         <span class="fill-space"></span>
 
@@ -28,15 +23,20 @@
     </mat-toolbar>
 
     <div style="text-align: center; background-color: gainsboro">
-        <img src="{{card.image}}" class="card-img-top" style="height: 50%; width: 50%;" alt="...">
+        <img src="{{card.cover}}" class="card-img-top" style="height: 50%; width: 50%;" alt="...">
     </div>
 
 
     <div style="display: inline-block; height: 50px; margin: 5px">
         <div style="float: left;">
-            <img src="https://ui-avatars.com/api/?rounded=true&name={{ card.author }}&size=42">
+            <a [routerLink]="['/', 'author', card.author.link]">
+                <img src="https://ui-avatars.com/api/?rounded=true&name={{ card.author.name }}&size=42">
+            </a>
         </div>
-        <div style="float: left; vertical-align:middle; padding: 10px">by {{card.author}}</div>
+        <div style="float: left; vertical-align:middle; padding: 5px 10px 0 10px;">
+            by   <a [routerLink]="['/', 'author', card.author.link]">{{ card.author.name }}</a>
+            <br> {{ card.date }}
+        </div>
     </div>
 
     <br>
@@ -49,6 +49,12 @@
         Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
         Aldus PageMaker including versions of Lorem Ipsum.
     </div>
+
+    <mat-chip-list>
+        <mat-chip *ngFor="let tag of card.tags" [routerLink]="['/', 'tag', tag]">
+            {{ tag }}
+        </mat-chip>
+    </mat-chip-list>
 
     <br>
 

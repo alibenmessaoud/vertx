@@ -3,7 +3,7 @@ export interface Card {
   idParent: any,
   author: any,
   description: any,
-  image: any,
+  cover: any,
   date: any,
   version: any,
   title: any,
