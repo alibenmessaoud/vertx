@@ -8,7 +8,7 @@ export class DataService {
     ELEMENT_DATA: Card[] = [
         {
             "code": "1000",
-            "idParent": "self",
+            "parentCode": "self",
             "author": {
                 "name": "Pascal Pezard",
                 "link": "pp"

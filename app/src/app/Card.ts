@@ -1,6 +1,6 @@
 export interface Card {
   code: any,
-  idParent: any,
+  parentCode: any,
   author: any,
   description: any,
   cover: any,

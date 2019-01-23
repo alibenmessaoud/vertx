@@ -36,7 +36,7 @@ export class CardComponent implements OnInit, OnDestroy {
     }
 
     hasParent() {
-        return this.card.idParent && this.card.idParent.length === 4 && this.card.idParent === "self";
+        return this.card.parentCode && this.card.parentCode.length === 4 && this.card.parentCode === "self";
     }
 
     hasNotParent() {
@@ -51,5 +51,17 @@ export class CardComponent implements OnInit, OnDestroy {
     hasPrev() {
         return this.card.links && (this.card.links.length === 1 || this.card.links.length === 2) &&
             ((this.card.links[0].prev && this.card.links[0].prev.length > 0) || (this.card.links[1].prev && this.card.links[1].prev.length > 0));
+    }
+
+    getNext() {
+        return this.hasNext() ? this.card.links[0].hasOwnProperty("next") ? this.card.links[0].next: this.card.links[1].next : this.card.code;
+    }
+
+    getPrev() {
+        return this.hasPrev() ? this.card.links[0].hasOwnProperty("prev") ? this.card.links[0].prev: this.card.links[1].prev : this.card.code;
+    }
+
+    getParent() {
+        return this.hasParent() ? this.card.parentCode: this.card.code;
     }
 }

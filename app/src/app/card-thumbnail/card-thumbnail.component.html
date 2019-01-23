@@ -2,14 +2,14 @@
     <mat-card-header>
         <div mat-card-avatar class="card-thumbnail-avatar-image">
             <img class="card-thumbnail-avatar-image"
-                 src="https://ui-avatars.com/api/?rounded=true&name={{ card.author }}&size=42">
+                 src="https://ui-avatars.com/api/?rounded=true&name={{ card.author.name }}&size=42">
         </div>
         <mat-card-title>
             {{ card.title }}
             <span class="badge badge-pill badge-secondary">{{ card.type }}</span>
         </mat-card-title>
         <mat-card-subtitle>
-            by {{ card.author }}
+            by {{ card.author.name }}
         </mat-card-subtitle>
     </mat-card-header>
     <div class="card-thumbnail-image-container">
