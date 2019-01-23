@@ -1,12 +1,36 @@
 <div class="card">
-  <img src="{{card.image}}"
-    class="card-img-top" style="height: 100%; width: 100%" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">{{card.title}} title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+  <div style="font-size: 30px; width: 100%; text-align: center; padding: 5px 0 5px 0">
+    {{card.title}}
   </div>
-  <div class="card-footer text-muted">
+
+  <div style="text-align: center; background-color: gainsboro">
+    <img src="{{card.image}}" class="card-img-top" style="height: 50%; width: 50%;" alt="...">
+  </div>
+
+  <div class="card-body" style="margin: 10px">
+    <div style="display: inline-block; height: 50px;">
+      <div style="float: left;">
+        <img src="https://ui-avatars.com/api/?rounded=true&name={{ card.author }}&size=42">
+      </div>
+      <div style="float: left; vertical-align:middle; padding: 10px">by {{card.author}}</div>
+    </div>
+    <br>
+    <div style="width: 100%; word-break: break-all;">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </div>
+  </div>
+
+  <br>
+
+  <div style="margin: 0 auto; width: 150px;">
+    <qrcode [qrdata]="url" [size]="150" [level]="'M'"></qrcode>
+  </div>
+
+  <div class="card-footer text-muted" style="font-style: italic; padding: 10px; text-align: right">
     Code XXX - Licence Creative Commons
+  </div>
+
+  <div>
+    End
   </div>
 </div>
