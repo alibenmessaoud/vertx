@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, AfterContentInit } from '@angular/core';
 import { DataService } from '../data/data.service';
-import { Card } from '../Card';
+import { Card } from '../card';
 import { Observable } from 'rxjs/Observable';
 import { AuthService } from '../auth.service';
 import { MatDialog, MatGridList } from '@angular/material';

@@ -1,5 +1,5 @@
 import {Component, OnInit, OnDestroy} from '@angular/core';
-import {Card} from '../Card';
+import {Card} from '../card';
 import {ActivatedRoute} from '@angular/router';
 import {DataService} from '../data/data.service';
 

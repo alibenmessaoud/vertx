@@ -1,9 +1,9 @@
 <div class="card-thumbnail-item" [ngStyle]="backgroundStyle">
     <a class="card-thumbnail-link" [routerLink]="['/', 'card', card.code]">
-        <div class="card-thumbnail-title">
+        <div class="card-thumbnail-title ellipsized-text">
             {{ card.title }}
         </div>
-        <div class="card-thumbnail-author-name">
+        <div class="card-thumbnail-author-name ellipsized-text">
             {{ card.author.name }}
         </div>
         <div class="card-thumbnail-poster">
@@ -24,4 +24,3 @@
 </div>
 
 
- 

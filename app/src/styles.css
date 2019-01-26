@@ -25,3 +25,9 @@ body {
   padding-left: .6em;
   border-radius: 10rem;
 }
+
+.ellipsized-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

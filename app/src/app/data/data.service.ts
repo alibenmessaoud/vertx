@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Card} from '../Card';
+import {Card} from '../card';
 import {Observable, of} from 'rxjs';
 
 @Injectable()
