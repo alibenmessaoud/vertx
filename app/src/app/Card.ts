@@ -2,6 +2,7 @@ export interface Card {
   code: any,
   parentCode: any,
   author: any,
+  poster: any,
   description: any,
   cover: any,
   date: any,

@@ -9,10 +9,12 @@ import { Card } from '../Card';
 export class CardThumbnailComponent implements OnInit {
 
   @Input() card: Card;
+  backgroundStyle: any;
 
   constructor() { }
 
   ngOnInit() {
+    this.backgroundStyle = { 'background': `url(${this.card.cover})` };
   }
 
 }
