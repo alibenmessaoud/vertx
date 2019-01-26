@@ -25,7 +25,8 @@ export class CardComponent implements OnInit, OnDestroy {
             const code = params['code']; // (+) converts string 'id' to a number
             this.dataServiceSubscription = this.dataService.get(code).subscribe(response => {
                 this.card = response;
-                console.log(response)
+                // this.card.cover = '';
+                console.log(response);
             });
         });
     }

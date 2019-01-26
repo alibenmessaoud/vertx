@@ -1,5 +1,44 @@
 .fill-space {
-/*This fills the remaining space, by using flexbox.
- Every toolbar row uses a flexbox row layout.*/
-flex: 1 1 auto;
+    /*This fills the remaining space, by using flexbox.
+     Every toolbar row uses a flexbox row layout.*/
+    flex: 1 1 auto;
+}
+
+.card {
+    width: 720px;
+    margin: auto
+}
+
+.card .card-content {
+    float: left;
+    width: calc(100% - 30px)
+}
+
+.card .card-content .card-header {
+
+}
+.card .card-content .card-header .card-cover {
+    float: left;
+    width: 120px;
+    height: 90px;
+}
+
+.card .card-content .card-header .card-description {
+    float: left;
+    width: calc(100% - 120px);
+    background-color: #0099ff;
+    height: 90px;
+}
+
+.card .card-content .card-header .card-description .card-title-and-author {
+    font-size: 30px
+}
+
+.card .card-content .card-header .card-description .card-title-and-author .card-title-link {
+    text-decoration: none;
+    font-style: italic
+}
+
+.card .card-content .card-body{
+    background-color: bisque;
 }

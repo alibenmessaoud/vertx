@@ -16,6 +16,7 @@ import {CardThumbnailComponent} from './card-thumbnail/card-thumbnail.component'
 import {TruncatePipe} from './truncate-pipe';
 import {CardComponent} from './card/card.component';
 import {QRCodeModule} from 'angularx-qrcode';
+import {ReadMoreComponent} from './read-more.component';
 
 @NgModule({
     declarations: [
@@ -25,7 +26,8 @@ import {QRCodeModule} from 'angularx-qrcode';
         PostDialogComponent,
         CardThumbnailComponent,
         TruncatePipe,
-        CardComponent
+        CardComponent,
+        ReadMoreComponent
     ],
     imports: [
         BrowserModule,
