@@ -18,6 +18,11 @@ import {CardComponent} from './card/card.component';
 import {QRCodeModule} from 'angularx-qrcode';
 import {ReadMoreComponent} from './read-more.component';
 import {CardHeaderComponent} from './card-header/card-header.component';
+import {CardBodyL11Component} from './card-body/card-body-l11/card-body-l11.component';
+import {CardBodyL12Component} from './card-body/card-body-l12/card-body-l12.component';
+import {CardBodyL21Component} from './card-body/card-body-l21/card-body-l21.component';
+import {CardBodyL22Component} from './card-body/card-body-l22/card-body-l22.component';
+import {MarkdownDirective} from './markdown.directive';
 
 @NgModule({
     declarations: [
@@ -27,9 +32,14 @@ import {CardHeaderComponent} from './card-header/card-header.component';
         PostDialogComponent,
         CardThumbnailComponent,
         TruncatePipe,
+        MarkdownDirective,
         CardComponent,
         ReadMoreComponent,
-        CardHeaderComponent
+        CardHeaderComponent,
+        CardBodyL11Component,
+        CardBodyL12Component,
+        CardBodyL21Component,
+        CardBodyL22Component
     ],
     imports: [
         BrowserModule,
