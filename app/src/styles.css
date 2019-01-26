@@ -44,3 +44,10 @@ body {
 .read-more {
     background-color: white;
 }
+
+.fleft {
+    float: left;
+}
+.fright{
+    float: right;
+}

@@ -16,8 +16,10 @@ export class CardComponent implements OnInit, OnDestroy {
     routeSubscription: any;
     dataServiceSubscription: any;
 
+
+
     constructor(private route: ActivatedRoute, private dataService: DataService) {
-        this.url = window.location.href
+        this.url = window.location.href;
     }
 
     ngOnInit() {
@@ -33,11 +35,11 @@ export class CardComponent implements OnInit, OnDestroy {
 
     ngOnDestroy() {
         this.routeSubscription.unsubscribe();
-        this.dataServiceSubscription.unsubscribe()
+        this.dataServiceSubscription.unsubscribe();
     }
 
     hasParent() {
-        return this.card.parentCode && this.card.parentCode.length === 4 && this.card.parentCode === "self";
+        return this.card.parentCode && this.card.parentCode.length === 4 && this.card.parentCode === 'self';
     }
 
     hasNotParent() {
@@ -55,14 +57,16 @@ export class CardComponent implements OnInit, OnDestroy {
     }
 
     getNext() {
-        return this.hasNext() ? this.card.links[0].hasOwnProperty("next") ? this.card.links[0].next: this.card.links[1].next : this.card.code;
+        return this.hasNext() ? this.card.links[0].hasOwnProperty('next') ? this.card.links[0].next : this.card.links[1].next : this.card.code;
     }
 
     getPrev() {
-        return this.hasPrev() ? this.card.links[0].hasOwnProperty("prev") ? this.card.links[0].prev: this.card.links[1].prev : this.card.code;
+        return this.hasPrev() ? this.card.links[0].hasOwnProperty('prev') ? this.card.links[0].prev : this.card.links[1].prev : this.card.code;
     }
 
     getParent() {
-        return this.hasParent() ? this.card.parentCode: this.card.code;
+        return this.hasParent() ? this.card.parentCode : this.card.code;
     }
+
+
 }
