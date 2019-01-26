@@ -83,11 +83,11 @@
     <div class="card-content">
         <app-card-header [card]="card"></app-card-header>
         <div class="card-body">
-            df
-            <br>
-            dfsj dkgvsj
-            <br>s
-
+            lorem #1
+            <app-card-body-l11 *ngIf="card.template === '11'" [card]="card"></app-card-body-l11>
+            <app-card-body-l12 *ngIf="card.template === '12'" [card]="card"></app-card-body-l12>
+            <app-card-body-l21 *ngIf="card.template === '21'" [card]="card"></app-card-body-l21>
+            <app-card-body-l22 *ngIf="card.template === '22'" [card]="card"></app-card-body-l22>
         </div>
     </div>
     <div style="float: left; width: 30px; background-color: darksalmon; height: 100%; display: block">

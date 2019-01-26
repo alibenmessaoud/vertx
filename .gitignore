@@ -33,6 +33,7 @@ logs
 node
 node_modules
 dist
+package-lock.json
 
 # ali
 syncit
