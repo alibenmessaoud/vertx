@@ -1,0 +1,34 @@
+<mat-card class="card-thumbnail">
+    <mat-card-header>
+        <div mat-card-avatar class="card-thumbnail-avatar-image">
+            <img class="card-thumbnail-avatar-image"
+                 src="https://ui-avatars.com/api/?rounded=true&name={{ card.author.name }}&size=42">
+        </div>
+        <mat-card-title>
+            {{ card.title }}
+            <span class="badge badge-pill badge-secondary">{{ card.type }}</span>
+        </mat-card-title>
+        <mat-card-subtitle>
+            by {{ card.author.name }}
+        </mat-card-subtitle>
+    </mat-card-header>
+    <div class="card-thumbnail-image-container">
+        <img mat-card-image src="{{ card.cover }}" alt="{{card.title}}">
+    </div>
+    <mat-card-content>
+        <p class="card-thumbnail-description">
+            {{ card.description | truncate: [148, '...'] }}
+        </p>
+    </mat-card-content>
+    <mat-card-actions style="text-align: right">
+        <button mat-raised-button class="card-thumbnail-action">
+            <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+            Like
+        </button>
+        <a mat-raised-button
+           class="card-thumbnail-action"
+           [routerLink]="['/', 'card', card.code]"
+           routerLinkActive="router-link-active">View</a>
+    </mat-card-actions>
+</mat-card>
+ 
