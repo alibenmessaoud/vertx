@@ -81,23 +81,7 @@
 
 <div class="card">
     <div class="card-content">
-        <div class="card-header">
-            <div *ngIf="card.cover" class="card-cover">
-                <img src="{{card.cover}}" class="card-img-top" style="max-width:100%;max-height:100%;">
-            </div>
-            <div class="card-description">
-                <div class="card-title-and-author">
-                    {{card.title}} (<a class="card-title-link"
-                                       [routerLink]="['/', 'author', card.author.link]">{{card.author.name}}</a>)
-                </div>
-                <div>
-                    Posted by <a class="no-decoration"
-                                 [routerLink]="['/', 'user', card.poster.link]">{{card.poster.name}}</a> | {{card.date}}
-                </div>
-                <app-read-more [text]="card.description" [maxLength]="20"></app-read-more>
-            </div>
-
-        </div>
+        <app-card-header [card]="card"></app-card-header>
         <div class="card-body">
             df
             <br>

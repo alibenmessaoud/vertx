@@ -1,0 +1,36 @@
+<div class="card-header">
+
+    <div class="card-author" (click)="toggleView()">
+        {{card.title}}
+        <a class="card-title-link" [routerLink]="['/', 'author', card.author.link]">({{card.author.name}})</a>
+        <div class="fright">
+            <div class="fright">
+                <mat-icon *ngIf="!isCollapsed">arrow_drop_down</mat-icon>
+                <mat-icon *ngIf="isCollapsed">arrow_drop_up</mat-icon>
+            </div>
+            <div class="card-type">
+                <div class="badge">{{card.type}}</div>
+            </div>
+        </div>
+    </div>
+    <ng-container *ngIf="isCollapsed">
+        <div class="card-cover">
+            <img  *ngIf="card.cover" src="{{card.cover}}" class="card-cover-image">
+            <img *ngIf="!card.cover" src="https://via.placeholder.com/120x90?text=kaplab" class="card-cover-image">
+        </div>
+        <div class="card-description">
+            <div>
+                Posted by
+                <a class="no-decoration" [routerLink]="['/', 'user', card.poster.link]">
+                    {{card.poster.name}}
+                </a>
+                |
+                {{card.date}}
+            </div>
+            <div class="broken-words card-description-text">
+                {{card.description | truncate: [140, '...']}}
+            </div>
+        </div>
+    </ng-container>
+
+</div>
