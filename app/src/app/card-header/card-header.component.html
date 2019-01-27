@@ -16,9 +16,9 @@
             <img *ngIf="!card.cover" src="https://via.placeholder.com/120x90?text=kaplab" class="card-cover-image">
         </div>
         <div class="card-description">
-            <div>
+            <div class="card-poster">
                 Posted by
-                <a class="no-decoration" [routerLink]="['/', 'user', card.poster.link]">
+                <a class="no-decoration cblack" [routerLink]="['/', 'user', card.poster.link]">
                     {{card.poster.name}}
                 </a>
                 |

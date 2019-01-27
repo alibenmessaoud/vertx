@@ -41,28 +41,13 @@
 }
 
 .card .card-content .card-body {
-    background-color: bisque;
+    background-color: white;
 }
 
 .card-type {
     padding-top: 2px;
     font-weight: bold;
     font-size: 20px;
-}
-
-.badge {
-    background-color: black;
-    /* border: 1px solid white; */
-    border-radius: 3px;
-    /* box-shadow: 1px 1px 1px rgba(0, 0, 0, 1); */
-    color: white;
-    height: 16px;
-    min-width: 16px;
-    padding: 3px 3px 0 3px;
-    text-align: center;
-    font-size: 14px;
-    font-weight: bold;
-    margin-top: 3px;
 }
 
 .card-icon {
@@ -97,7 +82,7 @@
     float: left;
     width: 30px;
     padding-top: 100px;
-    background-color: darksalmon;
+    background-color: white;
     height: 100%;
     display: block
 }

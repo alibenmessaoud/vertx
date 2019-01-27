@@ -12,7 +12,7 @@ export class CardHeaderComponent {
     @Input() card;
 
     toggleView() {
-        this.card.cover = ''
+        // this.card.cover = ''
         this.isCollapsed = !this.isCollapsed;
     }
 
