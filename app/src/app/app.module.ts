@@ -24,6 +24,7 @@ import {CardBodyL21Component} from './card-body/card-body-l21/card-body-l21.comp
 import {CardBodyL22Component} from './card-body/card-body-l22/card-body-l22.component';
 import {MarkdownDirective} from './markdown.directive';
 import {CardFooterComponent} from './card-footer/card-footer.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
     declarations: [
@@ -46,6 +47,7 @@ import {CardFooterComponent} from './card-footer/card-footer.component';
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
+        HttpClientModule,
         MaterialModule,
         FlexLayoutModule,
         AppRouters,
@@ -54,7 +56,8 @@ import {CardFooterComponent} from './card-footer/card-footer.component';
     ],
     providers: [
         DataService,
-        AuthService
+        AuthService,
+        HttpClientModule
     ],
     bootstrap: [AppComponent],
     entryComponents: [

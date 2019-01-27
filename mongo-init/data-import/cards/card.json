@@ -1,18 +1,19 @@
 [
   {
-
-    "idParent": "slef",
-    "author": "pp",
-    "date": "Today",
-    "version": "V0.1",
-    "title": "Gameplan",
-    "subtitle": "« David Sibbet »",
-    "template": "T11",
-    "type": "Agile",
-    "mediaPlaceholder": "",
-    "links": "",
-    "tags": "",
-    "licence": "CCXxx",
-    "code": ""
+	"content": {
+		"idParent": "slef",
+		"author": "pp",
+		"date": "Today",
+		"version": "V0.1",
+		"title": "Gameplan",
+		"subtitle": "« David Sibbet »",
+		"template": "T11",
+		"type": "Agile",
+		"mediaPlaceholder": "",
+		"links": "",
+		"tags": "",
+		"licence": "CCXxx",
+		"code": ""
+	}
   }
 ]

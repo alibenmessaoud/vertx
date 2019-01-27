@@ -1,6 +1,8 @@
 import {Injectable} from '@angular/core';
 import {Card} from '../card';
 import {Observable, of} from 'rxjs';
+import {HttpClient} from '@angular/common/http';
+import {Commons} from '../commons';
 
 @Injectable()
 export class DataService {
@@ -322,10 +324,12 @@ export class DataService {
         {value: 'Game 3', viewValue: 'Game 3'}
     ];
 
-    constructor() {
+    constructor(private http: HttpClient) {
     }
 
     getData(): Observable<Card[]> {
+        console.log("lollllll")
+        this.http.get(Commons.getBaseUrl() + '/api/content').subscribe(res => console.log('lol', res));
         return of<Card[]>(this.ELEMENT_DATA);
     }
 

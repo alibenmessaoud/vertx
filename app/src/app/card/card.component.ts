@@ -28,7 +28,7 @@ export class CardComponent implements OnInit, OnDestroy {
             this.dataServiceSubscription = this.dataService.get(code).subscribe(response => {
                 this.card = response;
                 // this.card.cover = '';
-                console.log(response);
+                // console.log(response);
             });
         });
     }

@@ -49,4 +49,9 @@ export class Commons {
         };
         return config[id ? id : '11'];
     }
+
+    public static getBaseUrl() {
+        return 'http://localhost:8080';
+    }
+
 }

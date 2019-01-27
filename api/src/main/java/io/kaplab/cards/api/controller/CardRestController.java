@@ -21,13 +21,13 @@ public class CardRestController {
     @RequestMapping("card/")
     public List<Card> findAll() {
         final List<Card> cards = repository.findAll();
-        log.info("Fetching cards from database {}", cards);
+        // log.info("Fetching cards from database {}", cards);
         return cards;
     }
 
     @RequestMapping(value = "card/", method = RequestMethod.POST)
     public void save(@RequestBody Card card) {
-        log.info("Storing card in database {}", card);
+        // log.info("Storing card in database {}", card);
         repository.save(card);
     }
 
