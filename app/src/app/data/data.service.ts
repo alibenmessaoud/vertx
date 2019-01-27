@@ -59,7 +59,7 @@ export class DataService {
         }
         , {
             'code': '1001',
-            'parentCode': 'self',
+            'parentCode': '1000',
             'poster': {
                 'name': 'Pascal Pezard',
                 'link': 'pp'

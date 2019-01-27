@@ -39,11 +39,7 @@ export class CardComponent implements OnInit, OnDestroy {
     }
 
     hasParent() {
-        return this.card.parentCode && this.card.parentCode.length === 4 && this.card.parentCode === 'self';
-    }
-
-    hasNotParent() {
-        return !this.hasParent();
+        return this.card.parentCode && this.card.parentCode.length > 0 && this.card.parentCode !== 'self';
     }
 
     hasNext() {

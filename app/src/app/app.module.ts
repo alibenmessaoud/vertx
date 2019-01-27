@@ -23,6 +23,7 @@ import {CardBodyL12Component} from './card-body/card-body-l12/card-body-l12.comp
 import {CardBodyL21Component} from './card-body/card-body-l21/card-body-l21.component';
 import {CardBodyL22Component} from './card-body/card-body-l22/card-body-l22.component';
 import {MarkdownDirective} from './markdown.directive';
+import {CardFooterComponent} from './card-footer/card-footer.component';
 
 @NgModule({
     declarations: [
@@ -39,7 +40,8 @@ import {MarkdownDirective} from './markdown.directive';
         CardBodyL11Component,
         CardBodyL12Component,
         CardBodyL21Component,
-        CardBodyL22Component
+        CardBodyL22Component,
+        CardFooterComponent
     ],
     imports: [
         BrowserModule,
