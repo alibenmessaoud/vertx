@@ -1,16 +1,13 @@
-<div>
-  <div style="margin: 0 auto; width: 50px; float: left;">
+<div class="card-footer-qr-code-container">
     <qrcode [qrdata]="url" [size]="50" [level]="'M'"></qrcode>
-  </div>
-  <div style="float: left; width: calc(100% - 50px)">
-    <div style="padding-left: 10px">
-      {{ card.licence }}
-      <br>
-      <mat-chip-list>
-        <mat-chip *ngFor="let tag of card.tags" [routerLink]="['/', 'tag', tag]">
-          {{ tag }}
-        </mat-chip>
-      </mat-chip-list>
-    </div>
-  </div>
 </div>
+<div class="card-footer-container">
+    {{ card.licence }}
+    <br>
+    <mat-chip-list>
+        <mat-chip *ngFor="let tag of card.tags" [routerLink]="['/', 'tag', tag]">
+            {{ tag }}
+        </mat-chip>
+    </mat-chip-list>
+</div>
+

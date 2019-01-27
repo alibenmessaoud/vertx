@@ -1,3 +1,5 @@
+
+
 .card-header .card-cover {
     float: left;
     width: 120px;
@@ -7,14 +9,16 @@
 .card-header .card-description {
     float: left;
     width: calc(100% - 120px);
-    background-color: #0099ff;
+    background-color: white;
+    color: black;
 }
 
 .card-header .card-information {
     width: 100%;
-    background-color: cadetblue;
+    background-color: white;
     border-bottom: gray 1px solid;
     text-align: center;
+    color: black;
 }
 
 .card-header .card-information .card-title {
@@ -37,7 +41,7 @@
 }
 
 .card-body {
-    background-color: bisque;
+    background-color: white;
 }
 
 .card-cover-image {
@@ -46,5 +50,10 @@
 }
 
 .card-description-text {
-    background: red;
+    background: white;
+    padding: 3px
+}
+
+.card-poster {
+    padding: 3px
 }

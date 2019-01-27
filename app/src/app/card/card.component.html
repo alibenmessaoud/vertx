@@ -1,6 +1,7 @@
 <div class="card">
     <div class="card-content">
         <app-card-header [card]="card"></app-card-header>
+        <div>&nbsp;</div>
         <div class="card-body">
             <app-card-body-l11 *ngIf="card.template === '11'" [card]="card"></app-card-body-l11>
             <app-card-body-l12 *ngIf="card.template === '12'" [card]="card"></app-card-body-l12>

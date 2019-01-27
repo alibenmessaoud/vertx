@@ -1,0 +1,11 @@
+.card-footer-qr-code-container {
+    margin: 0 auto;
+    width: 50px;
+    float: left;
+}
+
+.card-footer-container {
+    float: left;
+    width: calc(100% - 60px);
+    padding-left: 10px;
+}
