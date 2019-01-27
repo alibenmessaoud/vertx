@@ -1,16 +1,13 @@
 <div class="card-header">
 
-    <div class="card-author" (click)="toggleView()">
-        {{card.title}}
-        <a class="card-title-link" [routerLink]="['/', 'author', card.author.link]">({{card.author.name}})</a>
-        <div class="fright">
-            <div class="fright">
-                <mat-icon *ngIf="!isCollapsed">arrow_drop_down</mat-icon>
-                <mat-icon *ngIf="isCollapsed">arrow_drop_up</mat-icon>
-            </div>
-            <div class="card-type">
-                <div class="badge">{{card.type}}</div>
-            </div>
+    <div class="card-information" (click)="toggleView()">
+        <span class="card-title">{{card.title}}</span>
+        (<a class="card-author" [routerLink]="['/', 'author', card.author.link]">{{card.author.name}}</a>)
+        <br>
+        <span class="card-subtitle">{{card.subtitle}}</span>
+        <div>
+            <mat-icon *ngIf="!isCollapsed">arrow_drop_down</mat-icon>
+            <mat-icon *ngIf="isCollapsed">arrow_drop_up</mat-icon>
         </div>
     </div>
     <ng-container *ngIf="isCollapsed">
@@ -26,6 +23,8 @@
                 </a>
                 |
                 {{card.date}}
+                |
+                {{card.type}}
             </div>
             <div class="broken-words card-description-text">
                 {{card.description | truncate: [140, '...']}}

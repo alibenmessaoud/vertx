@@ -4,7 +4,11 @@ body {
     margin: 0;
 }
 
-.badge {
+a {
+    text-decoration: none;
+}
+
+.b-badge {
     display: inline-block;
     padding: .25em .4em;
     font-size: 75%;
@@ -16,12 +20,12 @@ body {
     border-radius: .25rem;
 }
 
-.badge-secondary {
+.b-badge-secondary {
     color: #fff;
     background-color: #6c757d;
 }
 
-.badge-pill {
+.b-badge-pill {
     padding-right: .6em;
     padding-left: .6em;
     border-radius: 10rem;
@@ -50,4 +54,8 @@ body {
 }
 .fright{
     float: right;
+}
+
+.acenter {
+    text-align: center
 }
