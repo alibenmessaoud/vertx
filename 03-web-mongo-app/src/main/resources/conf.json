@@ -1,0 +1,10 @@
+{
+   "wm.server.hostname": "localhost",
+   "wm.server.port" : 9000,
+
+   "wm.mongodb.host" : "localhost",
+   "wm.mongodb.port" : 27017,
+   "wm.mongodb.database": "vertxwmdb",
+   "wm.mongodb.username": "user",
+   "wm.mongodb.password": "user"
+}

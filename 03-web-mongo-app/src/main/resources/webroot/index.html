@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            var post = function(url, data) {
+                return fetch(url, {
+                    method: "POST", // *GET, POST, PUT, DELETE, etc.
+                    mode: "cors", // no-cors, cors, *same-origin
+                    cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+                    credentials: "same-origin", // include, *same-origin, omit
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    redirect: "follow", // manual, *follow, error
+                    referrer: "no-referrer", // no-referrer, *client
+                    body: JSON.stringify(data), // body data type must match "Content-Type" header
+                });
+
+                /**
+                 * .then(function(response) {
+                        return response.json();
+                    })
+                 * // Look at fetch api
+                 */
+            };
+
+            var postComment = function() {
+                var name = document.getElementById("name").value;
+                var comment = document.getElementById("comment").value;
+
+                var data = {
+                    name: name,
+                    comment: comment
+                };
+
+                post("/api/comment", data).then(function (value) {
+                    console.log(value);
+                });
+            };
+
+            // main
+
+            fetch('http://localhost:9000/api/comment')
+                .then(function(response) {
+                    return response.json();
+                })
+                .then(function(myJson) {
+                   // console.log(JSON.stringify(myJson));
+                });
+
+            // var submitBtn = document.getElementById("submit");
+            // log.console(submitBtn);
+            // submitBtn.addEventListener('click', postComment);
+
+        </script>
+    </head>
+    <body>
+
+        Name: <br>
+        <input type="text" id="name" name="name" value="Ali"><br>
+        Comment: <br>
+        <textarea type="text" id="comment" name="comment" value="Mouse"></textarea><br>
+        <input id="submit" type="submit" value="Submit" onclick="postComment()">
+        <!--<input id="reset_button" type="button" value="⟲" onclick=" document.getElementById('output3').innerHTML += 'The submit button was reset.<br>'; resetForm(this.form); ">-->
+
+    </body>
+</html>
